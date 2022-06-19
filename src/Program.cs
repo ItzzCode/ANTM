@@ -18,9 +18,9 @@ namespace Program {
 	class Program {
 		static void Main() {
 			string? input;
-			bool game = true;
+			bool running = true;
 
-			short radiation = 16600;
+			short radiation = 200;
 
 
 			//initialize 3 model objects.
@@ -33,7 +33,7 @@ namespace Program {
 			var modelNo3 = new Model(new char[1000]);
 			modelNo3.memory = Model.mutate(modelNo3.memory, 10000);
 			
-			while( game ) {
+			while( running ) {
 				Console.WriteLine("Enter an input.");
 				//take input, and set to empty string if null.
 				input = Console.ReadLine();
@@ -59,7 +59,7 @@ namespace Program {
 				//interpret input
 				switch( input2 ) {
 					case 0:
-						game = false;
+						running = false;
 						break;
 
 					case 1:
